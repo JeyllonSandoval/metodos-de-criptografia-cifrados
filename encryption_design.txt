@@ -1,0 +1,1 @@
+El algoritmo utiliza un cifrado por desplazamiento combinado, donde cada carácter del mensaje es desplazado según el valor ASCII del carácter de la clave correspondiente. Si el valor excede 256, se utiliza el módulo para mantener el rango.
