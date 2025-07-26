@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en JavaScript - Tutorial Completo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Eventos en JavaScript</h1>
+        <p class="subtitle">¿Qué son y cómo escucharlos?</p>
+
+        <!-- Sección de explicación -->
+        <section class="explanation">
+            <h2>¿Qué son los eventos?</h2>
+            <p>Los eventos son acciones que ocurren en el navegador web, como:</p>
+            <ul>
+                <li>Hacer clic en un botón</li>
+                <li>Mover el mouse</li>
+                <li>Presionar una tecla</li>
+                <li>Cargar una página</li>
+                <li>Enviar un formulario</li>
+            </ul>
+        </section>
+
+        <!-- Ejemplos interactivos -->
+        <section class="examples">
+            <h2>Ejemplos Prácticos</h2>
+
+            <!-- Ejemplo 1: Click -->
+            <div class="example-card">
+                <h3>1. Evento Click</h3>
+                <button id="clickBtn" class="btn">¡Haz clic aquí!</button>
+                <p id="clickResult" class="result">Resultado aparecerá aquí...</p>
+            </div>
+
+            <!-- Ejemplo 2: Mouse -->
+            <div class="example-card">
+                <h3>2. Eventos del Mouse</h3>
+                <div id="mouseArea" class="mouse-area">
+                    <p>Mueve el mouse sobre esta área</p>
+                    <p id="mouseResult" class="result">Coordenadas: X=0, Y=0</p>
+                </div>
+            </div>
+
+            <!-- Ejemplo 3: Teclado -->
+            <div class="example-card">
+                <h3>3. Eventos del Teclado</h3>
+                <input type="text" id="keyboardInput" placeholder="Escribe algo aquí..." class="input">
+                <p id="keyboardResult" class="result">Teclas presionadas aparecerán aquí...</p>
+            </div>
+
+            <!-- Ejemplo 4: Formulario -->
+            <div class="example-card">
+                <h3>4. Eventos de Formulario</h3>
+                <form id="testForm" class="form">
+                    <input type="text" placeholder="Nombre" class="input">
+                    <input type="email" placeholder="Email" class="input">
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+                <p id="formResult" class="result">Resultado del formulario...</p>
+            </div>
+
+            <!-- Ejemplo 5: Eventos personalizados -->
+            <div class="example-card">
+                <h3>5. Eventos Personalizados</h3>
+                <button id="customEventBtn" class="btn">Disparar Evento Personalizado</button>
+                <p id="customEventResult" class="result">Evento personalizado...</p>
+            </div>
+        </section>
+
+        <!-- Métodos de escucha -->
+        <section class="methods">
+            <h2>Métodos para Escuchar Eventos</h2>
+            
+            <div class="method-card">
+                <h3>addEventListener() - Método Moderno</h3>
+                <pre><code>elemento.addEventListener('click', function() {
+    console.log('¡Clic detectado!');
+});</code></pre>
+            </div>
+
+            <div class="method-card">
+                <h3>onEvent - Método Tradicional</h3>
+                <pre><code>elemento.onclick = function() {
+    console.log('¡Clic detectado!');
+};</code></pre>
+            </div>
+        </section>
+
+        <!-- Tipos de eventos comunes -->
+        <section class="event-types">
+            <h2>Tipos de Eventos Más Comunes</h2>
+            <div class="event-grid">
+                <div class="event-item">
+                    <h4>🖱️ Mouse</h4>
+                    <ul>
+                        <li>click</li>
+                        <li>dblclick</li>
+                        <li>mouseenter</li>
+                        <li>mouseleave</li>
+                        <li>mousemove</li>
+                    </ul>
+                </div>
+                <div class="event-item">
+                    <h4>⌨️ Teclado</h4>
+                    <ul>
+                        <li>keydown</li>
+                        <li>keyup</li>
+                        <li>keypress</li>
+                    </ul>
+                </div>
+                <div class="event-item">
+                    <h4>📝 Formularios</h4>
+                    <ul>
+                        <li>submit</li>
+                        <li>change</li>
+                        <li>input</li>
+                        <li>focus</li>
+                        <li>blur</li>
+                    </ul>
+                </div>
+                <div class="event-item">
+                    <h4>🌐 Documento</h4>
+                    <ul>
+                        <li>DOMContentLoaded</li>
+                        <li>load</li>
+                        <li>resize</li>
+                        <li>scroll</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="event.js"></script>
+</body>
+</html>
