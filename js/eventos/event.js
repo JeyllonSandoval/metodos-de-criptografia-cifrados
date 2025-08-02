@@ -194,6 +194,8 @@ function initFormEvents() {
             isValid = false;
         }
         
+        console.log('📝 Form data collected:', data);
+        
         if (isValid) {
             formResult.innerHTML = `
                 <strong>✅ Formulario enviado correctamente!</strong><br>
@@ -236,6 +238,11 @@ function initFormEvents() {
         // Change - Cuando el valor cambia
         input.addEventListener('change', function(event) {
             console.log('📝 Input changed:', event.target.name, event.target.value);
+        });
+        
+        // Input - Cuando el valor se modifica en tiempo real
+        input.addEventListener('input', function(event) {
+            console.log('📝 Input real-time:', event.target.name, event.target.value);
         });
     });
 }

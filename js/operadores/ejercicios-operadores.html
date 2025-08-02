@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Operadores de Comparación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .result {
+            background-color: #e8f5e8;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .info {
+            background-color: #d1ecf1;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 4px solid #17a2b8;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .ejercicio {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Ejercicios de Operadores de Comparación</h1>
+    
+    <div class="info">
+        <strong>Operadores que vamos a practicar:</strong><br>
+        • == (Doble igual): Compara valores sin importar el tipo<br>
+        • === (Triple igual): Compara valores Y tipos de datos<br>
+        • != (Distinto de): Compara si dos valores no son iguales<br>
+        • > (Mayor que): Comprueba si un número es mayor que otro<br>
+        • < (Menor que): Comprueba si un número es menor que otro<br>
+        • >= (Mayor o igual que): Verifica si un número es mayor o igual que otro<br>
+        • <= (Menor o igual que): Verifica si un número es menor o igual que otro
+    </div>
+
+    <!-- Ejercicio 1: Operadores de Igualdad -->
+    <div class="ejercicio">
+        <h2>📊 Ejercicio 1: Operadores de Igualdad (== vs ===)</h2>
+        <div class="warning">
+            <strong>Recordatorio:</strong><br>
+            • == (Doble igual): Compara valores sin importar el tipo<br>
+            • === (Triple igual): Compara valores Y tipos de datos
+        </div>
+        <div id="resultados1"></div>
+    </div>
+
+    <!-- Ejercicio 2: Operador Distinto de -->
+    <div class="ejercicio">
+        <h2>❌ Ejercicio 2: Operador Distinto de (!=)</h2>
+        <div class="warning">
+            <strong>Recordatorio:</strong><br>
+            • != (Distinto de): Compara si dos valores no son iguales
+        </div>
+        <div id="resultados2"></div>
+    </div>
+
+    <!-- Ejercicio 3: Operadores Mayor y Menor -->
+    <div class="ejercicio">
+        <h2>📈 Ejercicio 3: Operadores Mayor y Menor (>, <)</h2>
+        <div class="warning">
+            <strong>Recordatorio:</strong><br>
+            • > (Mayor que): Comprueba si un número es mayor que otro<br>
+            • < (Menor que): Comprueba si un número es menor que otro
+        </div>
+        <div id="resultados3"></div>
+    </div>
+
+    <!-- Ejercicio 4: Operadores Mayor o Igual y Menor o Igual -->
+    <div class="ejercicio">
+        <h2>📊 Ejercicio 4: Operadores Mayor o Igual y Menor o Igual (>=, <=)</h2>
+        <div class="warning">
+            <strong>Recordatorio:</strong><br>
+            • >= (Mayor o igual que): Verifica si un número es mayor o igual que otro<br>
+            • <= (Menor o igual que): Verifica si un número es menor o igual que otro
+        </div>
+        <div id="resultados4"></div>
+    </div>
+
+    <!-- Ejercicio 5: Ejercicio Práctico -->
+    <div class="ejercicio">
+        <h2>🎮 Ejercicio 5: Ejercicio Práctico - Validación de Edad</h2>
+        <div class="warning">
+            <strong>Simulación:</strong> Vamos a simular un sistema que valida si una persona puede conducir
+        </div>
+        <div id="resultados5"></div>
+    </div>
+
+    <script>
+        // Ejercicio 1: Operadores de Igualdad
+        function ejercicio1() {
+            const resultados1 = document.getElementById('resultados1');
+            
+            // Ejemplos con == (doble igual)
+            const ejemplo1 = 5 == "5";
+            const ejemplo2 = 0 == false;
+            const ejemplo3 = null == undefined;
+            
+            // Ejemplos con === (triple igual)
+            const ejemplo4 = 5 === "5";
+            const ejemplo5 = 0 === false;
+            const ejemplo6 = null === undefined;
+            
+            // Ejemplos adicionales
+            const ejemplo7 = 10 == 10;
+            const ejemplo8 = 10 === 10;
+            const ejemplo9 = "hola" == "hola";
+            const ejemplo10 = "hola" === "hola";
+            
+            resultados1.innerHTML = `
+                <div class="result">
+                    <strong>Con == (Doble igual):</strong><br>
+                    5 == "5" → ${ejemplo1}<br>
+                    0 == false → ${ejemplo2}<br>
+                    null == undefined → ${ejemplo3}<br>
+                    10 == 10 → ${ejemplo7}<br>
+                    "hola" == "hola" → ${ejemplo9}
+                </div>
+                
+                <div class="result">
+                    <strong>Con === (Triple igual):</strong><br>
+                    5 === "5" → ${ejemplo4}<br>
+                    0 === false → ${ejemplo5}<br>
+                    null === undefined → ${ejemplo6}<br>
+                    10 === 10 → ${ejemplo8}<br>
+                    "hola" === "hola" → ${ejemplo10}
+                </div>
+                
+                <div class="warning">
+                    <strong>Conclusión:</strong><br>
+                    El operador === es más estricto y recomendado porque evita conversiones de tipo inesperadas.
+                </div>
+            `;
+        }
+
+        // Ejercicio 2: Operador Distinto de
+        function ejercicio2() {
+            const resultados2 = document.getElementById('resultados2');
+            
+            const ejemplo1 = 5 != 3;
+            const ejemplo2 = "hola" != "adios";
+            const ejemplo3 = 10 != "10";
+            const ejemplo4 = 10 !== "10";
+            const ejemplo5 = 5 != 5;
+            const ejemplo6 = "mismo" != "mismo";
+            
+            resultados2.innerHTML = `
+                <div class="result">
+                    <strong>Ejemplos con != (Distinto de):</strong><br>
+                    5 != 3 → ${ejemplo1}<br>
+                    "hola" != "adios" → ${ejemplo2}<br>
+                    10 != "10" → ${ejemplo3}<br>
+                    10 !== "10" → ${ejemplo4}<br>
+                    5 != 5 → ${ejemplo5}<br>
+                    "mismo" != "mismo" → ${ejemplo6}
+                </div>
+                
+                <div class="warning">
+                    <strong>Nota:</strong><br>
+                    != compara valores sin importar el tipo, !== compara valores Y tipos.
+                </div>
+            `;
+        }
+
+        // Ejercicio 3: Operadores Mayor y Menor
+        function ejercicio3() {
+            const resultados3 = document.getElementById('resultados3');
+            
+            const ejemplo1 = 10 > 5;
+            const ejemplo2 = 3 < 7;
+            const ejemplo3 = 5 > 5;
+            const ejemplo4 = 5 < 5;
+            const ejemplo5 = 15 > 20;
+            const ejemplo6 = 8 < 3;
+            
+            resultados3.innerHTML = `
+                <div class="result">
+                    <strong>Ejemplos con > (Mayor que):</strong><br>
+                    10 > 5 → ${ejemplo1}<br>
+                    5 > 5 → ${ejemplo3}<br>
+                    15 > 20 → ${ejemplo5}
+                </div>
+                
+                <div class="result">
+                    <strong>Ejemplos con < (Menor que):</strong><br>
+                    3 < 7 → ${ejemplo2}<br>
+                    5 < 5 → ${ejemplo4}<br>
+                    8 < 3 → ${ejemplo6}
+                </div>
+                
+                <div class="warning">
+                    <strong>Recordatorio:</strong><br>
+                    Los operadores > y < solo funcionan con números. Para strings, compara alfabéticamente.
+                </div>
+            `;
+        }
+
+        // Ejercicio 4: Operadores Mayor o Igual y Menor o Igual
+        function ejercicio4() {
+            const resultados4 = document.getElementById('resultados4');
+            
+            const ejemplo1 = 10 >= 5;
+            const ejemplo2 = 5 >= 5;
+            const ejemplo3 = 3 >= 7;
+            const ejemplo4 = 7 <= 10;
+            const ejemplo5 = 5 <= 5;
+            const ejemplo6 = 15 <= 8;
+            
+            resultados4.innerHTML = `
+                <div class="result">
+                    <strong>Ejemplos con >= (Mayor o igual que):</strong><br>
+                    10 >= 5 → ${ejemplo1}<br>
+                    5 >= 5 → ${ejemplo2}<br>
+                    3 >= 7 → ${ejemplo3}
+                </div>
+                
+                <div class="result">
+                    <strong>Ejemplos con <= (Menor o igual que):</strong><br>
+                    7 <= 10 → ${ejemplo4}<br>
+                    5 <= 5 → ${ejemplo5}<br>
+                    15 <= 8 → ${ejemplo6}
+                </div>
+                
+                <div class="warning">
+                    <strong>Nota:</strong><br>
+                    >= incluye el caso de igualdad, por eso 5 >= 5 es true.
+                </div>
+            `;
+        }
+
+        // Ejercicio 5: Ejercicio Práctico
+        function ejercicio5() {
+            const resultados5 = document.getElementById('resultados5');
+            
+            // Simulamos diferentes edades
+            const edades = [15, 18, 21, 25, 30];
+            const edadMinimaConducir = 18;
+            const edadMinimaVotar = 18;
+            const edadMinimaBeber = 21;
+            
+            let resultados = '';
+            
+            edades.forEach(edad => {
+                const puedeConducir = edad >= edadMinimaConducir;
+                const puedeVotar = edad >= edadMinimaVotar;
+                const puedeBeber = edad >= edadMinimaBeber;
+                const esMenor = edad < 18;
+                const esAdulto = edad >= 18;
+                
+                resultados += `
+                    <div class="result">
+                        <strong>Edad: ${edad} años</strong><br>
+                        ¿Puede conducir? (>= 18): ${puedeConducir}<br>
+                        ¿Puede votar? (>= 18): ${puedeVotar}<br>
+                        ¿Puede beber? (>= 21): ${puedeBeber}<br>
+                        ¿Es menor de edad? (< 18): ${esMenor}<br>
+                        ¿Es adulto? (>= 18): ${esAdulto}
+                    </div>
+                `;
+            });
+            
+            resultados5.innerHTML = `
+                <div class="info">
+                    <strong>Simulación de validación de edad:</strong><br>
+                    Vamos a verificar qué puede hacer cada persona según su edad.
+                </div>
+                ${resultados}
+            `;
+        }
+
+        // Ejecutar todos los ejercicios cuando se carga la página
+        window.onload = function() {
+            ejercicio1();
+            ejercicio2();
+            ejercicio3();
+            ejercicio4();
+            ejercicio5();
+        };
+    </script>
+</body>
+</html> 

@@ -22,6 +22,40 @@
                 <li>Cargar una página</li>
                 <li>Enviar un formulario</li>
             </ul>
+            
+            <div class="info-box">
+                <h3>🎯 ¿Cómo funcionan los eventos?</h3>
+                <p>Los eventos siguen un patrón simple:</p>
+                <ol>
+                    <li><strong>Ocurre una acción</strong> (usuario hace clic, presiona tecla, etc.)</li>
+                    <li><strong>El navegador detecta</strong> la acción y crea un objeto evento</li>
+                    <li><strong>JavaScript escucha</strong> el evento con <code>addEventListener()</code></li>
+                    <li><strong>Se ejecuta tu código</strong> en respuesta al evento</li>
+                </ol>
+                
+                <div class="code-example">
+                    <h4>📝 Ejemplo básico:</h4>
+                    <pre><code>// 1. Seleccionar el elemento
+const boton = document.getElementById('miBoton');
+
+// 2. Escuchar el evento click
+boton.addEventListener('click', function(event) {
+    // 3. Tu código se ejecuta aquí
+    console.log('¡Botón clickeado!');
+    alert('Hola mundo');
+});</code></pre>
+                </div>
+                
+                <div class="benefits">
+                    <h4>✅ Beneficios de usar eventos:</h4>
+                    <ul>
+                        <li><strong>Interactividad:</strong> Tu página responde a las acciones del usuario</li>
+                        <li><strong>Experiencia de usuario:</strong> Interfaces dinámicas y responsivas</li>
+                        <li><strong>Control:</strong> Puedes prevenir comportamientos por defecto</li>
+                        <li><strong>Flexibilidad:</strong> Múltiples eventos en un solo elemento</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Ejemplos interactivos -->
@@ -55,8 +89,8 @@
             <div class="example-card">
                 <h3>4. Eventos de Formulario</h3>
                 <form id="testForm" class="form">
-                    <input type="text" placeholder="Nombre" class="input">
-                    <input type="email" placeholder="Email" class="input">
+                    <input type="text" name="name" placeholder="Nombre" class="input">
+                    <input type="email" name="email" placeholder="Email" class="input">
                     <button type="submit" class="btn">Enviar</button>
                 </form>
                 <p id="formResult" class="result">Resultado del formulario...</p>
